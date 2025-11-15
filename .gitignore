@@ -1,0 +1,20 @@
+# Maven
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+/.idea/
+/*.iml
+.vscode/
+
+# Mac
+.DS_Store
+
+# logs
+*.log
+
+# IntelliJ
+out/
+
+# H2 database files (optional to ignore)
+data/
