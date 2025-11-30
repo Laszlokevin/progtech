@@ -25,13 +25,11 @@ public class Main {
         ScoreDao dao = new ScoreDao();
         RandomAI aiPlayer = new RandomAI();
 
-        // Place human's starting piece on one of the middle squares automatically (spec)
         int startR = board.getRows() / 2 - 1;
         int startC = board.getCols() / 2 - 1;
         board.place(human.getSymbol(), startR, startC);
         System.out.println("Kezdőlépés automatikusan a középső négy mező egyikére került: " + toHumanPos(startR, startC));
-        boolean humanTurn = false; // human already placed starting stone, so AI goes next per "X is human and X starts" but initial stone placed - to keep simple, we let AI move now.
-        // Note: If you prefer that the human actively chooses the center, we can change logic to prompt and place human's first move.
+        boolean humanTurn = false;
 
         while (true) {
             System.out.println(board.toStringRepresentation());

@@ -13,7 +13,6 @@ public class ScoreDao {
     private final String dbUrl;
 
     public ScoreDao() {
-        // store DB files in ./data/gomoku (relative). ensure folder exists.
         File f = new File("data");
         if (!f.exists()) f.mkdirs();
         dbUrl = "jdbc:h2:./data/gomoku;AUTO_SERVER=FALSE";
