@@ -18,21 +18,18 @@
     </properties>
 
     <dependencies>
-        <!-- Logging -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.4.11</version>
         </dependency>
 
-        <!-- H2 embedded DB -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>2.2.220</version>
         </dependency>
 
-        <!-- JUnit 5 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -40,7 +37,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Mockito -->
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
@@ -51,7 +47,6 @@
 
     <build>
         <plugins>
-            <!-- Compiler -->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
@@ -60,7 +55,6 @@
                 </configuration>
             </plugin>
 
-            <!-- Jar plugin to set Main-Class -->
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.4.0</version>
@@ -73,7 +67,6 @@
                 </configuration>
             </plugin>
 
-            <!-- Assembly plugin to create fat JAR -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
@@ -97,7 +90,6 @@
                 </executions>
             </plugin>
 
-            <!-- JaCoCo for coverage -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -116,7 +108,6 @@
                 </executions>
             </plugin>
 
-            <!-- Checkstyle -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
@@ -125,8 +116,7 @@
                     <failOnViolation>false</failOnViolation>
                 </configuration>
             </plugin>
-
-            <!-- Surefire for tests -->
+            
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.1.2</version>
